@@ -136,7 +136,7 @@
   <script type="module">
     import SystemHelper from './SystemHelper.js';
 
-    function IsMobileDevice(value) {
+    window.IsMobileDevice = function IsMobileDevice(value) {
       try {
         let bMobileDevice = String(SystemHelper.IsMobileDevice());
         window.UnityInstance.SendMessage('UnityWebGL_JavaScript', 'IsMobileDevice', bMobileDevice);
